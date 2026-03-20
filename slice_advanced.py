@@ -3,3 +3,9 @@ def slice_advanced():
     en adelante, tomando uno de cada dos (paso 2).
     """
     pass
+
+    texto = input("Ingrese una frase: ") #el usuario ingresa una frase
+
+    print(texto[4::2]) #se imprime desde la 4 letra, tomando una letra cada 2
+
+slice_advanced()

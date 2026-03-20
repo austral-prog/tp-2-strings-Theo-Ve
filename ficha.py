@@ -1,3 +1,6 @@
+from traceback import print_exc
+
+
 def ficha():
     """Ejercicio integrador. Lee nombre, email y 3 notas, y genera una ficha
     de alumno aplicando: strip, title, lower, upper, int, len, find, slicing,
@@ -24,4 +27,60 @@ def ficha():
     #   - Código secreto: nombre invertido en mayúsculas
     #   - Las 3 notas, su suma, promedio y promedio entero
     #   - Cierre decorativo usando repetición de string ("=" * 24)
-    pass
+
+    nombre_completo = input("Ingrese su nombre completo: ") #Inputs para que el usuario ingrese nombre, email y 3 notas
+    email = input("Ingrese su email: ")
+    nota1 = input("Ingrese una nota: ")
+    nota2 = input("Ingrese una nota: ")
+    nota3 = input("Ingrese una nota: ")
+
+    print("========================") #Encabezado decorativo
+    print("    FICHA DEL ALUMNO")
+    print("========================")
+
+    print(f"Nombre: {nombre_completo.strip()}".title()) #Nombre limpio: sin espacios extra y con formato título
+
+    print(f"Email: {email.lower()}") #Email en minúsculas
+
+    print(f"Caracteres en nombre: {len(nombre_completo)}") #Cantidad de caracteres del nombre
+
+    iniciales = (nombre_completo.find(" ")) #Iniciales del nombre y apellido
+    print(f"Iniciales: {nombre_completo[0] + nombre_completo[iniciales + 1]}".upper())
+
+    nombre = nombre_completo[:iniciales].lower().strip() #apellido.nombre en minúsculas
+    apellido = nombre_completo[iniciales:].lower().strip()
+    print(f"Usuario: {apellido}.{nombre}")
+
+    print(f"Email valido: {"@" in email}") #Verifica si el email contiene @
+
+    dom = (email.find("@")) #Extraer el dominio del email
+    print(f"Dominio: {email[dom + 1:]}".lower())
+
+    print(f"Nombre para archivo: {nombre_completo.replace(" ", "_")}".title()) #Nombre con guion bajo en vez de espacio
+
+    print(f"Cantidad de a: {nombre_completo.lower().count("a")}") #Cuenta las 'a' en el nombre
+
+    print(f"Codigo secreto: {nombre_completo[-1::-1]}".upper()) #nombre invertido en mayúsculas
+
+    print(f"Nota 1: {nota1}") #las 3 notas
+    print(f"Nota 2: {nota2}")
+    print(f"Nota 3: {nota3}")
+
+    n1 = int(nota1) #transformo el string en numeros
+    n2 = int(nota2)
+    n3 = int(nota3)
+
+    suma = n1 + n2 + n3
+    print(f"Suma: {suma}") #suma de las 3 notas
+
+    print(f"Promedio: {suma/3}") #promedio de las 3 notas
+
+    print(f"Promedio entero: {int(suma/3)}") #promedio entero de las 3 notas
+
+    print("=" * 24) #Cierre decorativo
+
+
+ficha()
+
+
+

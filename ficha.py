@@ -38,17 +38,19 @@ def ficha():
     print("    FICHA DEL ALUMNO")
     print("========================")
 
-    print(f"Nombre: {nombre_completo.strip()}".title()) #Nombre limpio: sin espacios extra y con formato título
+    nombre_limpio = nombre_completo.strip()
+
+    print(f"Nombre: {nombre_limpio.title()}") #Nombre limpio: sin espacios extra y con formato título
 
     print(f"Email: {email.lower()}") #Email en minúsculas
 
-    print(f"Caracteres en nombre: {len(nombre_completo)}") #Cantidad de caracteres del nombre
+    print(f"Caracteres en nombre: {len(nombre_limpio)}") #Cantidad de caracteres del nombre
 
-    iniciales = (nombre_completo.find(" ")) #Iniciales del nombre y apellido
-    print(f"Iniciales: {nombre_completo[0] + nombre_completo[iniciales + 1]}".upper())
+    iniciales = nombre_limpio.find(" ") #iniciales del nombre y apellido
+    print(f"Iniciales: {(nombre_limpio[0] + nombre_limpio[iniciales + 1]).upper()}")
 
-    nombre = nombre_completo[:iniciales].lower().strip() #apellido.nombre en minúsculas
-    apellido = nombre_completo[iniciales:].lower().strip()
+    nombre = nombre_limpio[:iniciales].lower() #apellido.nombre en minuscula
+    apellido = nombre_limpio[iniciales + 1:].lower()
     print(f"Usuario: {apellido}.{nombre}")
 
     print(f"Email valido: {"@" in email}") #Verifica si el email contiene @
@@ -56,11 +58,11 @@ def ficha():
     dom = (email.find("@")) #Extraer el dominio del email
     print(f"Dominio: {email[dom + 1:]}".lower())
 
-    print(f"Nombre para archivo: {nombre_completo.replace(" ", "_")}".title()) #Nombre con guion bajo en vez de espacio
+    print(f"Nombre para archivo: {nombre_limpio.title().replace(' ', '_')}") #Nombre con guion bajo en vez de espacio
 
-    print(f"Cantidad de a: {nombre_completo.lower().count("a")}") #Cuenta las 'a' en el nombre
+    print(f"Cantidad de a: {nombre_limpio.lower().count("a")}") #Cuenta las 'a' en el nombre
 
-    print(f"Codigo secreto: {nombre_completo[-1::-1]}".upper()) #nombre invertido en mayúsculas
+    print(f"Codigo secreto: {nombre_limpio[-1::-1]}".upper()) #nombre invertido en mayúsculas
 
     print(f"Nota 1: {nota1}") #las 3 notas
     print(f"Nota 2: {nota2}")

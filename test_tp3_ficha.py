@@ -37,7 +37,7 @@ class TP3FichaTestCases(unittest.TestCase):
             self.assertEqual(results[8], "Email valido: True")
 
             # find + slicing
-            self.assertEqual(results[9], "Dominio: universidad.edu")
+            self.assertEqual(results[9], "dominio: universidad.edu")
 
             # replace
             self.assertEqual(results[10], "Nombre para archivo: Maria_Garcia")
@@ -46,7 +46,7 @@ class TP3FichaTestCases(unittest.TestCase):
             self.assertEqual(results[11], "Cantidad de a: 4")
 
             # reverse slicing + upper
-            self.assertEqual(results[12], "Codigo secreto: AICRAG AIRAM")
+            self.assertEqual(results[12], "CODIGO SECRETO: AICRAG AIRAM")
 
             # int casting
             self.assertEqual(results[13], "Nota 1: 8")
@@ -78,10 +78,10 @@ class TP3FichaTestCases(unittest.TestCase):
             self.assertEqual(results[6], "Iniciales: JP")
             self.assertEqual(results[7], "Usuario: perez.juan")
             self.assertEqual(results[8], "Email valido: True")
-            self.assertEqual(results[9], "Dominio: escuela.com")
+            self.assertEqual(results[9], "dominio: escuela.com")
             self.assertEqual(results[10], "Nombre para archivo: Juan_Perez")
             self.assertEqual(results[11], "Cantidad de a: 1")
-            self.assertEqual(results[12], "Codigo secreto: ZEREP NAUJ")
+            self.assertEqual(results[12], "CODIGO SECRETO: ZEREP NAUJ")
             self.assertEqual(results[13], "Nota 1: 6")
             self.assertEqual(results[14], "Nota 2: 9")
             self.assertEqual(results[15], "Nota 3: 6")

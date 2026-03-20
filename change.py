@@ -22,7 +22,7 @@ def change():
     pesos = int(vuelto)
     centavos = vuelto - pesos
 
-    print("pesos:")  #se imprime el dinero restante
+    print("Pesos:")  #se imprime el dinero restante
     print(pesos)
     print("Centavos:")
     print(round(centavos * 100))

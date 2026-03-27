@@ -8,4 +8,4 @@ def slice_advanced():
 
     print(texto[4::2]) #se imprime desde la 4 letra, tomando una letra cada 2
 
-slice_advanced()
+#slice_advanced()

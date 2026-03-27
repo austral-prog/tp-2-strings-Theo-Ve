@@ -82,7 +82,7 @@ def ficha():
     print("=" * 24) #Cierre decorativo
 
 
-ficha()
+#ficha()
 
 
 

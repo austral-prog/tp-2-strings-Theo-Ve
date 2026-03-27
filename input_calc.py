@@ -16,4 +16,4 @@ def rectangle():
     print(f"Area: {area}") #se imprime el area y perimetro
     print(f"Perimetro: {perimetro}")
 
-rectangle()
+#rectangle()

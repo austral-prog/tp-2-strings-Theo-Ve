@@ -16,7 +16,7 @@ def casting():
     total = float(precio_reducido * cantidad)
     print(f"Total: {total}")
 
-casting()
+#casting()
 
 
 

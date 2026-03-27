@@ -21,15 +21,15 @@ def string_methods():
 
     print(f"Title: {frase.title()}") #se imprime la frase con mayuscula en la primera letra de cada palabra
 
-    print(f"Find: {frase.find("gran")}") #se imprime en que numero de la frase aparece "gran"
+    print(f"Find: {frase.find('gran')}") #se imprime en que numero de la frase aparece "gran"
 
-    print(f"Replace: {frase.replace("programacion", "desarrollo")}") #se imprime la frase reemplazando "programacion" por "desarrollo"
+    print(f"Replace: {frase.replace('programacion', 'desarrollo')}") #se imprime la frase reemplazando "programacion" por "desarrollo"
 
-    print(f"Count: {frase.count("a")}") #se imprime la cantidad de veces que aparece "a"
+    print(f"Count: {frase.count('a')}") #se imprime la cantidad de veces que aparece "a"
 
-    print(f"Contiene Python: {"Python" in frase}") #se imprime si aparece la palabra "Python" en la frase o no
+    print(f"Contiene Python: {'Python' in frase}") #se imprime si aparece la palabra "Python" en la frase o no
 
-    print(f"Contiene Java: {"Java" in frase}") #se imprime si aparece la palabra "Java" en la frase o no
+    print(f"Contiene Java: {'Java' in frase}") #se imprime si aparece la palabra "Java" en la frase o no
 
     print(f"Slice: {frase[0:6]}") #se imprime la seccion 0 a 6 en la frase
 

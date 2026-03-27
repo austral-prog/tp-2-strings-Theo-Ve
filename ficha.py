@@ -53,14 +53,14 @@ def ficha():
     apellido = nombre_limpio[iniciales + 1:].lower()
     print(f"Usuario: {apellido}.{nombre}")
 
-    print(f"Email valido: {"@" in email}") #Verifica si el email contiene @
+    print(f"Email valido: {'@' in email}") #Verifica si el email contiene @
 
     dom = (email.find("@")) #Extraer el dominio del email
     print(f"Dominio: {email[dom + 1:]}".lower())
 
     print(f"Nombre para archivo: {nombre_limpio.title().replace(' ', '_')}") #Nombre con guion bajo en vez de espacio
 
-    print(f"Cantidad de a: {nombre_limpio.lower().count("a")}") #Cuenta las 'a' en el nombre
+    print(f"Cantidad de a: {nombre_limpio.lower().count('a')}") #Cuenta las 'a' en el nombre
 
     print(f"Codigo secreto: {nombre_limpio[-1::-1]}".upper()) #nombre invertido en mayúsculas
 
